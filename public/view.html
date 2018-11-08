@@ -19,7 +19,7 @@
       <h1>Hot Restaurant</h1>
       <h3>Current Reservations and Waiting List</h3>
       <hr>
-      <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Add New Table</button></a>
+      <a href="/make"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Add New Table</button></a>
       <a href="/home"><button class="btn btn-danger btn-lg"><span class="fa fa-th-list"></span> Home</button></a>
     </div>
     <div class="row">
@@ -41,17 +41,13 @@
           </div>
         </div>
 
+        <!-- Current Tables in Use -->
         <div class="card">
           <div class="card-header">
-            <h3><strong>Character Statistics</strong></h3>
+            <h4>Current Reservations</h4>
           </div>
           <div class="card-body">
-            <h2 id="name">Yoda</h2>
-            <div id="stats">
-              <h3><strong>Role:</strong> <span id="role">Jedi Master</span></h3>
-              <h3><strong>Age:</strong> <span id="age">900</span></h3>
-              <h3><strong>Force Points:</strong> <span id="force-points">2000</span></h3>
-            </div>
+            <ul id="tableList" class="list-group"></ul>
           </div>
         </div>
       </div>
@@ -70,13 +66,13 @@
         console.log(data);
         if (data) {
           $("#stats").show();
-          $("#name").text(data.name);
-          $("#role").text(data.role);
-          $("#age").text(data.age);
-          $("#force-points").text(data.forcePoints);
+          $("#reserve-name").text(data.name);
+          $("#reserve-phone").text(data.phone);
+          $("#reserve-email").text(data.email);
+          $("#reserve-unique-id").text(data.id);
         }
         else {
-          $("#name").text("The force is not strong with this one. Your character was not found.");
+          $("#reserve-name").text("We are booked . Your table was not found.");
           $("#stats").hide();
         }
       });
@@ -86,3 +82,5 @@
 </body>
 
 </html>
+
+
