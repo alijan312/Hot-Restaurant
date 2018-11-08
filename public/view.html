@@ -16,11 +16,11 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1>Star Wars Express</h1>
-      <h3>The greatest resource in the galaxy for Star Wars statistics!</h3>
+      <h1>Hot Restaurant</h1>
+      <h3>Current Reservations and Waiting List</h3>
       <hr>
-      <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Add New Character</button></a>
-      <a href="/all"><button class="btn btn-danger btn-lg"><span class="fa fa-th-list"></span> All Characters</button></a>
+      <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Add New Table</button></a>
+      <a href="/home"><button class="btn btn-danger btn-lg"><span class="fa fa-th-list"></span> Home</button></a>
     </div>
     <div class="row">
 
@@ -28,10 +28,10 @@
 
         <div class="card mb-4">
           <div class="card-header">
-            <h3><strong>Character Search</strong></h3>
+            <h3><strong>Table Search</strong></h3>
           </div>
           <div class="card-body">
-            <input type="text" id="character-search" class="form-control">
+            <input type="text" id="table-search" class="form-control">
             <br>
             <div class="text-right">
               <button type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="fa fa-search"></span> Search
@@ -66,7 +66,7 @@
       // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
       searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
 
-      $.get("/api/characters/" + searchedCharacter, function(data) {
+      $.get("/api/tables/" + searchedCharacter, function(data) {
         console.log(data);
         if (data) {
           $("#stats").show();
