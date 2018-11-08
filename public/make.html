@@ -25,7 +25,7 @@
       </a>
       <a href="/make">
         <button class="btn btn-danger btn-lg">
-          <span class="fa fa-th-list"></span>Make Reservation</button>
+          <span class="fa fa-th-list"></span>Home</button>
       </a>
     </div>
     <div class="row">
@@ -77,10 +77,10 @@
       event.preventDefault();
 
       var newTable = {
-        name: $("#reserve-name").val().trim(),
-        role: $("#reserve-phone").val().trim(),
-        age: $("#reserve-email").val().trim(),
-        unique: $("#reserve-unique-id").val().trim()
+        customerName: $("#reserve-name").val().trim(),
+        phoneNumber: $("#reserve-phone").val().trim(),
+        customerEmail: $("#reserve-email").val().trim(),
+        customerID: $("#reserve-unique-id").val().trim()
       };
 
       $.post("/api/tables", newTable)
@@ -95,3 +95,4 @@
 </body>
 
 </html>
+
