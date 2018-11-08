@@ -1,0 +1,25 @@
+{
+  "name": "starwars-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alijan312/Hot-Restaurant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alijan312/Hot-Restaurant/issues"
+  },
+  "homepage": "https://github.com/alijan312/Hot-Restaurant#readme"
+}
