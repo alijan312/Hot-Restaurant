@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Hot Restaurant - Express</title>
+  <title>View - Hot Restaurant - Express</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,11 +19,11 @@
       <h1>Hot Restaurant</h1>
       <h3>Book your seat before they are all gone!</h3>
       <hr>
-      <a href="/">
+      <a href="/view">
         <button class="btn btn-danger btn-lg">
           <span class="fa fa-eye"></span> View Tables</button>
       </a>
-      <a href="/all">
+      <a href="/make">
         <button class="btn btn-danger btn-lg">
           <span class="fa fa-th-list"></span>Make Reservation</button>
       </a>
@@ -86,7 +86,7 @@
       $.post("/api/tables", newTable)
         .then(function(data) {
           console.log(data);
-          alert("Adding table...");
+          alert($("#reserve-name").text("Adding your table reservations..."));
         });
 
     });
